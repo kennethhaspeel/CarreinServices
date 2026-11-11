@@ -149,13 +149,23 @@ export function BrushIcon(props: SVGProps<SVGSVGElement>) {
 
 export function SteamIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg {...iconProps} {...props}>
-      <path d="M14 6c-4 4 4 7 0 12M24 6c-4 4 4 7 0 12M34 6c-4 4 4 7 0 12" />
-      <path d="M8 28c0 8 6 14 16 14s16-6 16-14H8Z" />
+    <svg
+      viewBox="0 0 64 64"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M17 42a11 11 0 0 1-1-22 16 16 0 0 1 32 0 11 11 0 0 1-1 22" />
+      <path d="M24 33c-4 4 4 6 0 10s4 6 0 10" />
+      <path d="M32 33c-4 4 4 6 0 10s4 6 0 10" />
+      <path d="M40 33c-4 4 4 6 0 10s4 6 0 10" />
     </svg>
   );
 }
-
 export function SparklesIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg {...iconProps} {...props}>
@@ -170,6 +180,46 @@ export function CalendarIcon(props: SVGProps<SVGSVGElement>) {
     <svg {...iconProps} {...props}>
       <rect x="6" y="9" width="36" height="33" rx="4" />
       <path d="M6 19h36M15 4v9M33 4v9" />
+    </svg>
+  );
+}
+export function SprayBottleIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...iconProps} {...props}>
+      <path d="M22 8h20v7H22z" />
+      <path d="M25 15v9l-7 7v25a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3V31l-7-7v-9" />
+      <path d="M25 24h12M24 50h14" />
+      <path d="M42 11h5M50 11h5M49 6l4-3M49 16l4 3" />
+    </svg>
+  );
+}
+
+export function CleaningToolIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...iconProps} {...props}>
+      <path d="m14 48 7-7" />
+      <path d="m20 43 7 7" />
+      <path d="m18 39 19-19 9 9-19 19z" />
+      <path d="m25 32 9 9M30 27l9 9M35 22l9 9" />
+      <path d="M43 18a8 8 0 0 1 12-10 8 8 0 0 1-10 12" />
+      <path d="m12 46-5 5M17 51l-5 5" />
+    </svg>
+  );
+}
+
+export function LeatherIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 64 72"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M25 5h14c0 8 6 11 14 8l5 10c-12 8-12 23 0 33l-5 9c-9-4-16-2-21 5-5-7-12-9-21-5l-5-9c12-10 12-25 0-33l5-10c8 3 14 0 14-8Z" />
     </svg>
   );
 }

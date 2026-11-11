@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "./Afbeeldingen/logo.png";
 const services = [
-  { label: "Auto detailing", href: "/diensten/auto-detailing" },
-  { label: "Interieurreiniging", href: "/diensten/interieurreiniging" },
-  { label: "Lakbescherming", href: "/diensten/lakbescherming" },
+  { label: "Stoffen Zetel", href: "/diensten/stoffenzetel" },
+   { label: "Lederen Zetel", href: "/diensten/lederenzetel" },
+  // { label: "Lakbescherming", href: "/diensten/lakbescherming" },
 ];
 
 export default function Header() {

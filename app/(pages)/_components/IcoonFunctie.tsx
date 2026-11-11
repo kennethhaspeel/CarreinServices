@@ -11,6 +11,15 @@ const iconProps: SVGProps<SVGSVGElement> = {
   strokeLinejoin: "round",
   "aria-hidden": true,
 };
+export function CheckBox() {
+  return (
+    <span aria-hidden="true" className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-[#0868ed]">
+      <svg viewBox="0 0 12 12" className="h-3 w-3" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m2 6 3 3 5-6" />
+      </svg>
+    </span>
+  );
+}
 export function StarIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg {...iconProps} {...props}>
@@ -116,6 +125,51 @@ export function ClockIcon(props: SVGProps<SVGSVGElement>) {
     <svg {...iconProps} {...props}>
       <circle cx="24" cy="24" r="20" />
       <path d="M24 12v13l10 4" />
+    </svg>
+  );
+}
+
+export function SearchIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...iconProps} {...props}>
+      <circle cx="21" cy="21" r="13" />
+      <path d="m31 31 12 12" />
+    </svg>
+  );
+}
+
+export function BrushIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...iconProps} {...props}>
+      <path d="m40 6-18 22" />
+      <path d="M18 28c-6 0-10 4-10 10 0 3-2 4-4 5 8 3 18 1 22-6 2-4 0-9-8-9Z" />
+    </svg>
+  );
+}
+
+export function SteamIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...iconProps} {...props}>
+      <path d="M14 6c-4 4 4 7 0 12M24 6c-4 4 4 7 0 12M34 6c-4 4 4 7 0 12" />
+      <path d="M8 28c0 8 6 14 16 14s16-6 16-14H8Z" />
+    </svg>
+  );
+}
+
+export function SparklesIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...iconProps} {...props}>
+      <path d="M22 6c1 9 5 13 14 14-9 1-13 5-14 14-1-9-5-13-14-14 9-1 13-5 14-14Z" />
+      <path d="M38 30c.5 4 2 5.500 6 6-4 .5-5.500 2-6 6-.5-4-2-5.500-6-6 4-.5 5.500-2 6-6Z" />
+    </svg>
+  );
+}
+
+export function CalendarIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...iconProps} {...props}>
+      <rect x="6" y="9" width="36" height="33" rx="4" />
+      <path d="M6 19h36M15 4v9M33 4v9" />
     </svg>
   );
 }

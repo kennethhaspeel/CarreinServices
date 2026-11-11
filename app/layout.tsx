@@ -23,7 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col">
           <Header />
-          <div className="AchtergrondDonker">
+          <div className="AchtergrondDonker flex-1">
             {children}
           </div>
           

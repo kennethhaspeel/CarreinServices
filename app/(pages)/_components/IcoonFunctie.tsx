@@ -13,8 +13,19 @@ const iconProps: SVGProps<SVGSVGElement> = {
 };
 export function CheckBox() {
   return (
-    <span aria-hidden="true" className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-[#0868ed]">
-      <svg viewBox="0 0 12 12" className="h-3 w-3" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <span
+      aria-hidden="true"
+      className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-[#0868ed]"
+    >
+      <svg
+        viewBox="0 0 12 12"
+        className="h-3 w-3"
+        fill="none"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <path d="m2 6 3 3 5-6" />
       </svg>
     </span>
@@ -209,17 +220,27 @@ export function CleaningToolIcon(props: SVGProps<SVGSVGElement>) {
 
 export function LeatherIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      viewBox="0 0 64 72"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="3"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
+    <svg {...iconProps} {...props}>
       <path d="M25 5h14c0 8 6 11 14 8l5 10c-12 8-12 23 0 33l-5 9c-9-4-16-2-21 5-5-7-12-9-21-5l-5-9c12-10 12-25 0-33l5-10c8 3 14 0 14-8Z" />
+    </svg>
+  );
+}
+
+export function StoelIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...iconProps}
+      {...props}
+      viewBox="0 0 120 160"
+      fill="none"
+      aria-label="Illustratie van een stoel"
+      role="img"
+    >
+      <g stroke="currentColor" strokeWidth="5" strokeLinecap="round">
+        <path d="M37 68 42 21 Q44 8 58 8 H76 Q89 8 88 22 L84 72" />
+        <path d="M26 76 Q32 69 55 69 H85 Q91 69 87 76 Q82 85 60 86 H35 Q23 85 22 80 Q21 78 26 76Z" />
+        <path d="M33 84 21 151 M49 86 48 154 M76 84 93 151 M86 80 105 145" />
+      </g>
     </svg>
   );
 }

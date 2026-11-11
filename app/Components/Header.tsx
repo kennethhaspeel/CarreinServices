@@ -7,7 +7,7 @@ import Logo from "./Afbeeldingen/logo.png";
 const services = [
   { label: "Stoffen Zetel", href: "/diensten/stoffenzetel" },
    { label: "Lederen Zetel", href: "/diensten/lederenzetel" },
-  // { label: "Lakbescherming", href: "/diensten/lakbescherming" },
+   { label: "Stoelen", href: "/diensten/stoelen" },
 ];
 
 export default function Header() {

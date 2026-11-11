@@ -7,8 +7,11 @@ export default function Lederenzetel() {
   return (
     <>
       <HeroSection />
+      <hr className="border-white/20 my-6" />
       <VoorNaBlok />
+       <hr className="border-white/20 my-6" />
       <Werkwijze />
+       <hr className="border-white/20 my-6" />
       <ExtraBanner />
 
     </>

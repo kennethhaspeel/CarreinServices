@@ -5,9 +5,9 @@ import Portrait from "../afbeeldingen/zelfportret.png";
 
 export default function OverOnsBlok() {
   return (
-    <section className="bg-[#020d13] text-white">
+    <section className="bg-background text-white">
       <div className="mx-auto grid max-w-7xl md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
-        <div className="relative aspect-[4/3] w-full md:aspect-auto md:min-h-[320px]">
+        <div className="relative aspect-4/3 w-full md:aspect-auto md:min-h-80">
           <Image
             src={Portrait}
             alt="Kenneth, zaakvoerder van Carrein Services"

@@ -1,5 +1,5 @@
 import { Icoon } from "@/app/types/IcoonSVG";       
-import { LeafIcon, ShieldIcon, HomeIcon, ClockIcon } from "./IcoonBalkIconen";
+import { LeafIcon, ShieldIcon, HomeIcon, ClockIcon } from "../../_components/IcoonFunctie";
 import IcoonbalkKaart from "./IcoonbalkKaart";
 
 export default function Icoonbalk() {

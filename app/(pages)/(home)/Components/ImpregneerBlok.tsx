@@ -2,12 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import BackgroundImage from "../afbeeldingen/impregneer.png";
-import { ShieldIcon } from "./IcoonBalkIconen";
+import { ShieldIcon } from "../../_components/IcoonFunctie";
 
 
 export default function ImpregneerBlok() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#020d13] text-white">
+    <section className="relative isolate overflow-hidden bg-background text-white">
       <Image
         src={BackgroundImage}
         alt=""
@@ -17,9 +17,9 @@ export default function ImpregneerBlok() {
       />
 
       {/* Donkere overgang van links naar rechts, onder de tekst */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#020d13]/90 via-[#020d13]/70 to-transparent md:bg-gradient-to-r md:from-[#020d13] md:via-[#020d13]/75 md:to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-background/90 via-background/70 to-transparent md:bg-linear-to-r md:from-background md:via-background/75 md:to-transparent" />
 
-      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-5 py-12 sm:px-8 md:min-h-[400px] md:flex-row md:items-center md:justify-between md:py-16">
+      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-5 py-12 sm:px-8 md:min-h-100 md:flex-row md:items-center md:justify-between md:py-16">
         <div className="max-w-xl">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#087cff]">
             Extra bescherming
@@ -48,7 +48,7 @@ export default function ImpregneerBlok() {
         </div>
 
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-10">
-          <div className="flex h-40 w-40 flex-col items-center justify-center gap-2 rounded-full border-4 border-[#8fa8ff]/70 bg-[#020d13]/90 text-center shadow-xl">
+          <div className="flex h-40 w-40 flex-col items-center justify-center gap-2 rounded-full border-4 border-[#8fa8ff]/70 bg-background/90 text-center shadow-xl">
             <ShieldIcon className="h-10 w-10" />
             <span className="text-sm font-bold uppercase leading-tight">
               Langere

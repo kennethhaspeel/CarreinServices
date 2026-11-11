@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
+import Image from "next/image";
+import Logo from "./Afbeeldingen/logo.png";
 const services = [
   { label: "Auto detailing", href: "/diensten/auto-detailing" },
   { label: "Interieurreiniging", href: "/diensten/interieurreiniging" },
@@ -18,18 +19,7 @@ export default function Header() {
       <div className="mx-auto flex min-h-19 max-w-360 items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
         <div className="flex shrink-0 items-center gap-3">
           <Link href="/" aria-label="Carrein home" className="leading-none">
-            <span className="block text-[30px] font-black tracking-tight sm:text-[38px]">
-              <span className="TekstBlauw">CAR</span>
-              <span className="text-white">REIN</span>
-            </span>
-            <span className="mt-1 block text-[9px] font-bold tracking-[0.2em] TekstBlauw sm:text-[10px]">
-              DEEP CLEANING SOLUTIONS
-            </span>
-          </Link>
-          <Link href="/">
-            <span className="hidden text-sm font-semibold sm:block">
-              Services
-            </span>
+            <Image src={Logo} alt="Carrein Services" className="h-auto w-64" />
           </Link>
         </div>
 

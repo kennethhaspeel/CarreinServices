@@ -1,30 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroImage from "../afbeeldingen/heroafbeelding.png";
 
-
-        // <Image
-        //   src="/images/home/heroafbeelding.png"
-        //   alt="Professionele meubelreiniging aan huis"
-        //   fill
-        //   priority
-        //   sizes="(max-width: 768px) 100vw, 50vw"
-        //   className="object-cover object-[70%_center]"
-        // />
 export default function HeroSection() {
   return (
     <section className="relative isolate overflow-hidden bg-background text-white">
-<div className="relative aspect-video w-full md:absolute md:inset-y-0 md:right-0 md:aspect-auto md:h-full md:w-[60%]">
-  <Image
-    src="/images/home/heroafbeelding.png"
-    alt="Professionele meubelreiniging aan huis"
-    fill
-    priority
-    sizes="(max-width: 768px) 100vw, 60vw"
-    className="object-cover object-[100%_center]"
-  />
+      <div className="relative aspect-video w-full md:absolute md:inset-y-0 md:right-0 md:aspect-auto md:h-full md:w-[60%]">
+        <Image
+          src={HeroImage}
+          alt="Professionele meubelreiniging aan huis"
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, 60vw"
+          className="object-cover object-[100%_center]"
+        />
 
-  <div className="absolute inset-0 bg-linear-to-b from-transparent to-background md:bg-linear-to-r md:from-background md:via-background/60 md:to-transparent" />
-</div>
+        <div className="absolute inset-0 bg-linear-to-b from-transparent to-background md:bg-linear-to-r md:from-background md:via-background/60 md:to-transparent" />
+      </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 pb-12 pt-6 sm:px-8 md:flex md:min-h-140 md:items-center md:py-16">
         <div className="md:w-1/2 md:pr-10">

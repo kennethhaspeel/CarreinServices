@@ -2,7 +2,8 @@
 
 :root {
   --background: #020d13;
-  --foreground: #171717;
+  --foreground: #ededed;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -10,13 +11,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-montserrat);
   --font-mono: var(--font-montserrat);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {

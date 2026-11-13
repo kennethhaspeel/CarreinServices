@@ -8,6 +8,7 @@ const services = [
   { label: "Stoffen Zetel", href: "/diensten/stoffenzetel" },
    { label: "Lederen Zetel", href: "/diensten/lederenzetel" },
    { label: "Stoelen", href: "/diensten/stoelen" },
+    { label: "Matrassen", href: "/diensten/matrassen" },
 ];
 
 export default function Header() {

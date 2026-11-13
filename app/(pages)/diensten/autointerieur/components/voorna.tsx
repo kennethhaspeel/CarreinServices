@@ -1,5 +1,9 @@
 import voor_01 from "../afbeeldingen/01_voor.jpg"
 import na_01 from "../afbeeldingen/01_na.jpg"
+import voor_02_jpg from "../afbeeldingen/voor_02.jpg"
+import na_02_jpg from "../afbeeldingen/na_02.jpg"
+import voor_03 from "../afbeeldingen/voor_03.png"
+import na_03 from "../afbeeldingen/na_03.png"
 import { SliderComponent } from "@/app/(pages)/voor-na/SliderComponent";
 
 const Vergelijkingen = [
@@ -10,13 +14,13 @@ const Vergelijkingen = [
   },
   {
     title: "Achterbank",
-    before: voor_01,
-    after: na_01,
+    before: voor_02_jpg,
+    after: na_02_jpg,
   },
   {
     title: "Lederen stoel",
-    before: voor_01,
-    after: na_01,
+    before: voor_03,
+    after: na_03,
   },
 ];
 const VoorNa = () => {

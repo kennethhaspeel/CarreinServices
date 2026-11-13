@@ -28,10 +28,6 @@ const Werkwijze = () => {
           <section className="h-full overflow-hidden rounded-xl bg-sky-50 shadow-sm">
             <div className="grid h-full md:grid-cols-[1.2fr_0.8fr]">
               <div className="flex flex-col p-6 pl-20">
-                <span className="absolute left-5 top-5 flex size-10 items-center justify-center rounded-full bg-blue-600 text-xl font-bold text-white">
-                  1
-                </span>
-
                 <h2 className="font-bold leading-tight text-slate-900">
                   DIEPTEREINIGING
                   <span className="block text-sm font-semibold">
@@ -89,10 +85,6 @@ const Werkwijze = () => {
           <section className="h-full overflow-hidden rounded-xl bg-sky-50 shadow-sm">
             <div className="grid h-full md:grid-cols-[1.2fr_0.8fr]">
               <div className="flex flex-col p-6 pl-20">
-                <span className="absolute left-5 top-5 flex size-10 items-center justify-center rounded-full bg-blue-600 text-xl font-bold text-white">
-                  2
-                </span>
-
                 <h2 className="font-bold leading-tight text-slate-900">
                   ANTI-ALLERGENE REINIGING
                   <span className="block text-sm font-semibold">

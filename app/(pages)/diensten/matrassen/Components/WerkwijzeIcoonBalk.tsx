@@ -1,7 +1,6 @@
 import {
   SparklesIcon,
   ShieldIcon,
-  StoelIcon,
   HeartIcon,
   LeafIcon,
   ClockIcon,
@@ -52,7 +51,7 @@ const WerkwijzeIcoonBalk = () => {
         <ol className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           {stappen.map((stap, index) => (
             <li
-              key={stap.titel}
+              key={index}
               className="relative flex flex-col items-center text-center"
             >
               <span className="flex h-18 w-18 items-center justify-center rounded-full border-2 border-white/80">

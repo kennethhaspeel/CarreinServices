@@ -6,9 +6,10 @@ import Image from "next/image";
 import Logo from "./Afbeeldingen/logo.png";
 const services = [
   { label: "Stoffen Zetel", href: "/diensten/stoffenzetel" },
-   { label: "Lederen Zetel", href: "/diensten/lederenzetel" },
-   { label: "Stoelen", href: "/diensten/stoelen" },
-    { label: "Matrassen", href: "/diensten/matrassen" },
+  { label: "Lederen Zetel", href: "/diensten/lederenzetel" },
+  { label: "Stoelen", href: "/diensten/stoelen" },
+  { label: "Matrassen", href: "/diensten/matrassen" },
+  { label: "Auto Interieur", href: "/diensten/autointerieur" },
 ];
 
 export default function Header() {

@@ -244,3 +244,56 @@ export function StoelIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+export function DiamondIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+<svg {...iconProps} {...props} viewBox="0 0 80 80">
+      <path
+        d="M23 30L31 20H49L57 30L40 56L23 30Z"
+        fill="#F8FAFC"
+        stroke="#F8FAFC"
+        strokeWidth={1.5}
+        strokeLinejoin="round"
+      />
+      <path
+        d="M23 30H57M31 20L35 30L40 56L45 30L49 20M35 30H45"
+        stroke="#071521"
+        strokeWidth={1.5}
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+export function SmellIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...iconProps} {...props}>
+      <g
+    stroke="#F8FAFC"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M15 38c6-6 6-12 1-17-4-4-3-9 1-13" />
+    <path d="M24 40c6-6 6-12 1-17-4-4-3-9 1-13" />
+    <path d="M33 38c6-6 6-12 1-17-4-4-3-9 1-13" />
+  </g>
+    </svg>
+  );
+}
+
+export function CarIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...iconProps} {...props} viewBox="0 0 48 48" fill="none">
+<g
+    stroke="#F8FAFC"
+    stroke-width="2.4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M12 17 15.8 8.8A3.5 3.5 0 0 1 19 7h10a3.5 3.5 0 0 1 3.2 1.8L36 17c2.8.4 4.5 2.5 4.5 5.2v9.2a3 3 0 0 1-3 3h-2.3l-1.4-3H14.2l-1.4 3h-2.3a3 3 0 0 1-3-3v-9.2c0-2.7 1.7-4.8 4.5-5.2Z" />
+    <path d="m15 17 2.5-6h13l2.5 6M8.5 25h5m21 0h5" />
+    <circle cx="15" cy="23" r="2" />
+    <circle cx="33" cy="23" r="2" />
+  </g>
+    </svg>
+  );
+}

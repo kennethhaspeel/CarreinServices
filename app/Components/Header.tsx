@@ -20,7 +20,7 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#020d13] text-white">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-background text-white">
       <div className="mx-auto flex min-h-19 max-w-360 items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
         <div className="flex shrink-0 items-center gap-3">
           <Link href="/" aria-label="Carrein home" className="leading-none">
@@ -122,7 +122,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <nav className="border-t border-white/10 bg-[#020d13] px-5 py-4 lg:hidden">
+        <nav className="border-t border-white/10 bg-background px-5 py-4 lg:hidden">
           <div className="mx-auto flex max-w-360 flex-col gap-1 text-sm font-semibold">
             <Link href="/" onClick={() => setMenuOpen(false)} className="py-2">
               HOME
@@ -163,6 +163,9 @@ export default function Header() {
               className="py-2"
             >
               OVER CARREIN
+            </Link>
+            <Link href="/faq" onClick={() => setMenuOpen(false)} className="py-2 hover:text-[#66adff]">
+              FAQ
             </Link>
             <Link
               href="/contact"

@@ -4,6 +4,7 @@ import UspBlok from './Components/UspBlok';
 import Werkwijze from './Components/Werkwijze';
 import GeschiktVoor from './Components/GeschiktVoor';
 import Waarom from './Components/Waarom';
+import VoorNa from './Components/voorna';
 
 const OprittenTerrassen = () => {
     return (
@@ -14,9 +15,12 @@ const OprittenTerrassen = () => {
             <hr className="border-white/20 my-6" />
             <Werkwijze />
             <hr className="border-white/20 my-6" />
+            <VoorNa />
+            <hr className="border-white/20 my-6" />
             <GeschiktVoor />
             <hr className="border-white/20 my-6" />
             <Waarom />
+            
 
         </>
     );

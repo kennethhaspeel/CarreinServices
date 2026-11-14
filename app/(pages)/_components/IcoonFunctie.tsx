@@ -246,7 +246,7 @@ export function StoelIcon(props: SVGProps<SVGSVGElement>) {
 }
 export function DiamondIcon(props: SVGProps<SVGSVGElement>) {
   return (
-<svg {...iconProps} {...props} viewBox="0 0 80 80">
+    <svg {...iconProps} {...props} viewBox="0 0 80 80">
       <path
         d="M23 30L31 20H49L57 30L40 56L23 30Z"
         fill="#F8FAFC"
@@ -267,15 +267,15 @@ export function SmellIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg {...iconProps} {...props}>
       <g
-    stroke="#F8FAFC"
-    stroke-width="2.8"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path d="M15 38c6-6 6-12 1-17-4-4-3-9 1-13" />
-    <path d="M24 40c6-6 6-12 1-17-4-4-3-9 1-13" />
-    <path d="M33 38c6-6 6-12 1-17-4-4-3-9 1-13" />
-  </g>
+        stroke="#F8FAFC"
+        stroke-width="2.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M15 38c6-6 6-12 1-17-4-4-3-9 1-13" />
+        <path d="M24 40c6-6 6-12 1-17-4-4-3-9 1-13" />
+        <path d="M33 38c6-6 6-12 1-17-4-4-3-9 1-13" />
+      </g>
     </svg>
   );
 }
@@ -283,23 +283,23 @@ export function SmellIcon(props: SVGProps<SVGSVGElement>) {
 export function CarIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg {...iconProps} {...props} viewBox="0 0 48 48" fill="none">
-<g
-    stroke="#F8FAFC"
-    stroke-width="2.4"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path d="M12 17 15.8 8.8A3.5 3.5 0 0 1 19 7h10a3.5 3.5 0 0 1 3.2 1.8L36 17c2.8.4 4.5 2.5 4.5 5.2v9.2a3 3 0 0 1-3 3h-2.3l-1.4-3H14.2l-1.4 3h-2.3a3 3 0 0 1-3-3v-9.2c0-2.7 1.7-4.8 4.5-5.2Z" />
-    <path d="m15 17 2.5-6h13l2.5 6M8.5 25h5m21 0h5" />
-    <circle cx="15" cy="23" r="2" />
-    <circle cx="33" cy="23" r="2" />
-  </g>
+      <g
+        stroke="#F8FAFC"
+        stroke-width="2.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 17 15.8 8.8A3.5 3.5 0 0 1 19 7h10a3.5 3.5 0 0 1 3.2 1.8L36 17c2.8.4 4.5 2.5 4.5 5.2v9.2a3 3 0 0 1-3 3h-2.3l-1.4-3H14.2l-1.4 3h-2.3a3 3 0 0 1-3-3v-9.2c0-2.7 1.7-4.8 4.5-5.2Z" />
+        <path d="m15 17 2.5-6h13l2.5 6M8.5 25h5m21 0h5" />
+        <circle cx="15" cy="23" r="2" />
+        <circle cx="33" cy="23" r="2" />
+      </g>
     </svg>
   );
 }
 export function MoneyIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg {...iconProps} {...props} viewBox="0 0 48 48" fill="none" >
+    <svg {...iconProps} {...props} viewBox="0 0 48 48" fill="none">
       <g
         stroke="currentColor"
         strokeWidth="2.5"
@@ -313,6 +313,24 @@ export function MoneyIcon(props: SVGProps<SVGSVGElement>) {
         <ellipse cx="18" cy="24" rx="8" ry="3.5" />
         <path d="M10 24v6c0 2 3.6 3.5 8 3.5s8-1.5 8-3.5v-6" />
         <path d="M10 30v6c0 2 3.6 3.5 8 3.5s8-1.5 8-3.5v-6" />
+      </g>
+    </svg>
+  );
+}
+
+export function CarpetIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...iconProps} {...props} viewBox="-8 -4 80 80" fill="none">
+      <g
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M10.5 38.5 34 15a12 12 0 0 1 17 17L27.5 55.5" />
+        <circle cx="19" cy="47" r="12" />
+        <circle cx="19" cy="47" r="6.5" />
+        <circle cx="19" cy="47" r="1.5" fill="currentColor" stroke="none" />
       </g>
     </svg>
   );

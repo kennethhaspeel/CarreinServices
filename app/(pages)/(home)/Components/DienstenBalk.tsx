@@ -14,13 +14,13 @@ export default function DienstenBalk() {
             titel: "Stoffen Zetels",
             afbeelding: StoffenZetel,
             omschrijving: "Dieptereiniging en impregneren van stoffen zetels. Verwijdert vlekken, geurtjes en allergenen",
-            url: "diensten/stoffenzetels"
+            url: "diensten/stoffenzetel"
         },
         {
             titel: "Lederen Zetels",
             afbeelding: LederenZetel,
             omschrijving: "Reinigen, voeden en beschermen van lederen zetels. Houdt het leder soepel en voorkomt kraken",
-            url: "diensten/lederenzetels"
+            url: "diensten/lederenzetel"
         },
         {
             titel:"Stoelen",
@@ -32,13 +32,13 @@ export default function DienstenBalk() {
             titel: "Tapijt",
             afbeelding: Tapijt,
             omschrijving: "Grondige reiniging van tapijten en vloerkleden. Verwijdert vuil, vlekken en geurtjes",
-            url: "diensten/tapijt"
+            url: "diensten/tapijten"
         },
         {
             titel: "Matras",
             afbeelding: matras,
             omschrijving: "Dieptereiniging van matrassen. Verwijdert stof, vuil en allergenen voor een frisse nachtrust",
-            url: "diensten/matras"
+            url: "diensten/matrassen"
         },
         {
             titel: "Auto Interieur",
@@ -50,13 +50,13 @@ export default function DienstenBalk() {
             titel: "Oprit & Terras",
             afbeelding: OpritTerras,
             omschrijving: "Reinigen van opritten en terrassen. Verwijdert vuil, mos en vlekken voor een frisse uitstraling",
-            url: "diensten/opritten-terrassen"
+            url: "diensten/oprittenterrassen"
         },
         {
-            titel: "Tuinmeubelen",
+            titel: "Tuinmeubilair",
             afbeelding: Tuinmeubelen,
-            omschrijving: "Reinigen en beschermen van tuinmeubelen. Verwijdert vuil, vlekken en geurtjes",
-            url: "diensten/tuinmeubelen"
+            omschrijving: "Reinigen en beschermen van tuinmeubilair. Verwijdert vuil, vlekken en geurtjes",
+            url: "diensten/tuinmeubilair"
         }
     ]
   return (

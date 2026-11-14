@@ -10,6 +10,7 @@ const services = [
   { label: "Stoelen", href: "/diensten/stoelen" },
   { label: "Matrassen", href: "/diensten/matrassen" },
   { label: "Auto Interieur", href: "/diensten/autointerieur" },
+  { label: "Opritten & Terrassen", href: "/diensten/oprittenterrassen" },
 ];
 
 export default function Header() {

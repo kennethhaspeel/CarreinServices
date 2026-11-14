@@ -297,3 +297,23 @@ export function CarIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+export function MoneyIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...iconProps} {...props} viewBox="0 0 48 48" fill="none" >
+      <g
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <ellipse cx="30" cy="12" rx="8" ry="3.5" />
+        <path d="M22 12v6c0 2 3.6 3.5 8 3.5s8-1.5 8-3.5v-6" />
+        <path d="M22 18v6c0 2 3.6 3.5 8 3.5s8-1.5 8-3.5v-6" />
+        <path d="M30 33.5c4.4 0 8-1.5 8-3.5v-6" />
+        <ellipse cx="18" cy="24" rx="8" ry="3.5" />
+        <path d="M10 24v6c0 2 3.6 3.5 8 3.5s8-1.5 8-3.5v-6" />
+        <path d="M10 30v6c0 2 3.6 3.5 8 3.5s8-1.5 8-3.5v-6" />
+      </g>
+    </svg>
+  );
+}

@@ -5,14 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "./Afbeeldingen/logo.png";
 const services = [
-  { label: "Stoffen Zetel", href: "/diensten/stoffenzetel" },
-  { label: "Lederen Zetel", href: "/diensten/lederenzetel" },
-  { label: "Stoelen", href: "/diensten/stoelen" },
-  { label: "Matrassen", href: "/diensten/matrassen" },
   { label: "Auto Interieur", href: "/diensten/autointerieur" },
+  { label: "Lederen Zetel", href: "/diensten/lederenzetel" },
+  { label: "Matrassen", href: "/diensten/matrassen" },
   { label: "Opritten & Terrassen", href: "/diensten/oprittenterrassen" },
+  { label: "Stoelen", href: "/diensten/stoelen" },
+  { label: "Stoffen Zetel", href: "/diensten/stoffenzetel" },
   { label: "Tapijten", href: "/diensten/tapijten" },
-    { label: "Tuinmeubilair", href: "/diensten/tuinmeubilair" },
+  { label: "Tuinmeubilair", href: "/diensten/tuinmeubilair" },
 ];
 
 export default function Header() {
@@ -72,6 +72,9 @@ export default function Header() {
           </Link>
           <Link href="/over-carrein" className="py-2 hover:text-[#66adff]">
             OVER CARREIN
+          </Link>
+          <Link href="/faq" className="py-2 hover:text-[#66adff]">
+            FAQ
           </Link>
           <Link href="/contact" className="py-2 hover:text-[#66adff]">
             CONTACT

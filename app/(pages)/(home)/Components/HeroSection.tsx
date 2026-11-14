@@ -50,7 +50,7 @@ export default function HeroSection() {
             </Link>
 
             <a
-              href="tel:+32000000000"
+              href="tel:+32471875540"
               className="inline-flex min-h-14 items-center justify-center gap-3 rounded-md border-2 border-white/80 px-6 py-3 font-bold transition hover:bg-white/10"
             >
               <span aria-hidden="true">☎</span>

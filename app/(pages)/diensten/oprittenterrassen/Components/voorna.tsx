@@ -1,22 +1,26 @@
 import terras_voor from "../Afbeeldingen/terras_voor.png"
 import terras_na from "../Afbeeldingen/terras_na.png"
+import terras2_voor from "../Afbeeldingen/terras2_voor.jpg"
+import terras2_na from "../Afbeeldingen/terras2_na.jpg"
+import terras3_voor from "../Afbeeldingen/terras3_voor.jpg"
+import terras3_na from "../Afbeeldingen/terras3_na.jpg"
 import { SliderComponent } from "@/app/(pages)/voor-na/SliderComponent";
 
 const Vergelijkingen = [
   {
-    title: "Automatten",
+    title: "Terras 1",
     before: terras_voor,
     after: terras_na,
   },
   {
-    title: "Achterbank",
-    before: terras_voor,
-    after: terras_na,
+    title: "Terras 2",
+    before: terras2_voor,
+    after: terras2_na,
   },
   {
-    title: "Lederen stoel",
-    before: terras_voor,
-    after: terras_na,
+    title: "Terras 3",
+    before: terras3_voor,
+    after: terras3_na,
   },
 ];
 const VoorNa = () => {

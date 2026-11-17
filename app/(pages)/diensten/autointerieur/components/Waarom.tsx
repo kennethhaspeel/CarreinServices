@@ -10,12 +10,14 @@ const stappen: Icoon[] = [
   {
     icon: DiamondIcon,
     titel: "Diepgaande reiniging",
-    omschrijving: "We verwijderen zelfs het hardnekkigste vuil van de bekleding, tapijten en vloermatten",
+    omschrijving:
+      "We verwijderen zelfs het hardnekkigste vuil van de bekleding, tapijten en vloermatten",
   },
   {
     icon: LeafIcon,
     titel: "Gezond binnenklimaat",
-    omschrijving: "Vermindert allergieën, stof en bacteriën en zorgt voor schonere en gezondere omgeving",
+    omschrijving:
+      "Vermindert allergieën, stof en bacteriën en zorgt voor schonere en gezondere omgeving",
   },
   {
     icon: SparklesIcon,
@@ -33,9 +35,10 @@ const Waarom = () => {
   return (
     <>
       <section className="mx-auto max-w-7xl px-5 py-6 sm:px-8">
-        <h2 className="inline-block border-b-4 border-[#0868ed] pb-2 text-xl font-bold">
-          Waarom kiezen voor onze interieurreiniging?
-        </h2>
+        <h1 className="max-w-3xl text-3xl font-black uppercase leading-tight sm:text-5xl">
+          Waarom kiezen voor {" "}
+          <span className="text-[#087cff]">autointerieur reiniging</span>
+        </h1>
 
         <ol className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {stappen.map((stap, index) => (
@@ -47,8 +50,9 @@ const Waarom = () => {
                 <stap.icon className="h-12 w-12" />
               </span>
               <h3 className="mt-3 font-bold">{stap.titel}</h3>
-              <p className="mt-1 max-w-[16rem] text-sm text-white/75">{stap.omschrijving}</p>
-             
+              <p className="mt-1 max-w-[16rem] text-sm text-white/75">
+                {stap.omschrijving}
+              </p>
             </li>
           ))}
         </ol>

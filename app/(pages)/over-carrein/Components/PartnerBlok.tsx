@@ -1,6 +1,6 @@
 import React from 'react'
 const eyebrow = "text-xs font-bold uppercase tracking-[0.25em] text-[#087cff]";
-const partners = ["Delmi Decor", "Meubelen Defossez", "Extremis", "Jori", "Louis Vuitton"];
+const partners = ["Delmi Decor", "Meubelen Defossez", "Extremis", "Jori"];
 
 const PartnerBlok = () => {
   return (

@@ -25,7 +25,7 @@ const usps: Icoon[] = [
   {
     icon: CalendarIcon,
     titel: "Flexibele afspraken",
-    omschrijving: "Ook 's avonds en weekend mogelijk",
+    omschrijving: "Vlotte planning op een moment dat u past.",
   },
 ];
 const UspBlok = () => {

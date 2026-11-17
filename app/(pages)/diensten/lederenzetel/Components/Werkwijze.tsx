@@ -10,12 +10,14 @@ const stappen: Icoon[] = [
   {
     icon: SteamIcon,
     titel: "1. Stoombehandeling",
-    omschrijving: "Wanneer het ledertype het toelaat, gebruiken we gecontroleerde stoom om hardnekkig vuil los te maken",
+    omschrijving:
+      "Wanneer het ledertype het toelaat, gebruiken we gecontroleerde stoom om hardnekkig vuil los te maken",
   },
   {
     icon: SprayBottleIcon,
     titel: "2. Reiniging",
-    omschrijving: "We verzorgen het leer met een, door ons gekozen en goedgekeurde, lederreiniger.",
+    omschrijving:
+      "We verzorgen het leer met een, door ons gekozen en goedgekeurde, lederreiniger.",
   },
   {
     icon: CleaningToolIcon,
@@ -26,16 +28,18 @@ const stappen: Icoon[] = [
   {
     icon: SparklesIcon,
     titel: "4. Bescherming",
-    omschrijving: "Het leer is nu beschermd tegen vuil, vlekken, kraken, uitdroging,...",
+    omschrijving:
+      "Het leer is nu beschermd tegen vuil, vlekken, kraken, uitdroging,...",
   },
 ];
 const Werkwijze = () => {
   return (
     <>
       <section className="mx-auto max-w-7xl px-5 py-6 sm:px-8">
-        <h2 className="inline-block border-b-4 border-[#0868ed] pb-2 text-xl font-bold">
-          Zo reinigen wij jouw zetel
-        </h2>
+        <h1 className="max-w-3xl text-3xl font-black uppercase leading-tight sm:text-5xl">
+          Zo reinigen wij uw{" "}
+          <span className="text-[#087cff]">lederen zetel</span>
+        </h1>
 
         <ol className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {stappen.map((stap, index) => (
@@ -47,7 +51,9 @@ const Werkwijze = () => {
                 <stap.icon className="h-10 w-12" />
               </span>
               <h3 className="mt-3 font-bold">{stap.titel}</h3>
-              <p className="mt-1 max-w-[16rem] text-sm text-white/75">{stap.omschrijving}</p>
+              <p className="mt-1 max-w-[16rem] text-sm text-white/75">
+                {stap.omschrijving}
+              </p>
               {index < stappen.length - 1 && (
                 <span
                   aria-hidden="true"

@@ -11,7 +11,7 @@ const stappen: Icoon[] = [
   {
     icon: DiamondIcon,
 titel:"",
-    omschrijving: "Verhoogt de uitstraling van uw",
+    omschrijving: "Verhoogt de uitstraling van uw tuin",
   },
   {
     icon: LeafIcon,

@@ -9,7 +9,7 @@ const waardes: Icoon[] = [
   { icon: GearIcon, titel: "Professionele technieken", omschrijving: "Met de beste machines en milieuvriendelijke producten." },
   { icon: ShieldIcon, titel: "Betrouwbaar en servicegericht", omschrijving: "Kwaliteit, eerlijk advies en een persoonlijke aanpak." },
 ];
-const eyebrow = "text-xs font-bold uppercase tracking-[0.25em] text-[#087cff]";
+const eyebrow = " font-bold uppercase tracking-[0.25em] text-[#087cff]";
 const VerhaalBlok = () => {
   return (
     <>

@@ -2,7 +2,6 @@ import {
   SteamIcon,
   SprayBottleIcon,
   ShieldIcon,
-  StoelIcon,
 } from "@/app/(pages)/_components/IcoonFunctie";
 import { Icoon } from "@/app/types/IcoonSVG";
 import "./stijl.css";
@@ -31,11 +30,12 @@ const Werkwijze = () => {
   return (
     <>
       <section className="mx-auto max-w-7xl px-5 py-6 sm:px-8">
-        <h2 className="inline-block border-b-4 border-[#0868ed] pb-2 text-xl font-bold">
-          Onze aanpak
-        </h2>
+        <h1 className="max-w-3xl text-3xl font-black uppercase leading-tight sm:text-5xl">
+            Onze{" "}
+            <span className="text-[#087cff]">aanpak</span>
+          </h1>
 
-        <ol className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {stappen.map((stap, index) => (
             <li
               key={stap.titel}
@@ -58,16 +58,7 @@ const Werkwijze = () => {
               )}
             </li>
           ))}
-          <li key="stoel" className="stoel-kaart">
-            <p className="stoel-tekst">
-              Kwaliteit in alle detail.
-              <br />
-              Voor een tijdloos
-              <br />
-              interieur.
-            </p>
-            <StoelIcon className="stoel-icoon" />
-          </li>
+
         </ol>
       </section>
     </>

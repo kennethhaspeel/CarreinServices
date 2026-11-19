@@ -1,3 +1,11 @@
+import ContactForm from './components/contactform';
+
+const Page = () => {
+  return <ContactForm />;
+};
+
+export default Page;
+
 // import * as z from "zod";
 // import Form from "next/form";
 // // Define a schema

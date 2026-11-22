@@ -1,4 +1,13 @@
 import vragen from "./Components/faq.json";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Veelgestelde vragen',
+  description: 'Bekijk de veelgestelde vragen over Carrein Services.',
+  alternates: {
+    canonical: '/faq',
+  },
+}
 const FaqPage = () => {
   return (
     <>

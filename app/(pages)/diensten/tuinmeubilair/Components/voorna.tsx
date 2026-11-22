@@ -1,8 +1,9 @@
+"use client";
 import voor_01 from "../Afbeeldingen/01_voor.jpg";
 import na_01 from "../Afbeeldingen/01_na.jpg";
 import voor_02 from "../Afbeeldingen/02_voor.jpg";
 import na_02 from "../Afbeeldingen/02_na.jpg";
-import { SliderComponent } from "@/app/(pages)/voor-na/SliderComponent";
+
 import Image from "next/image";
 
 const resultaten = [

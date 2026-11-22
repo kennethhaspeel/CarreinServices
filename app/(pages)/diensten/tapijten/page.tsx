@@ -3,6 +3,15 @@ import HeroSection from "./Components/HeroSection";
 import UspBlok from "./Components/UspBlok";
 import Waarom from "./Components/Waarom";
 import Werkwijze from "./Components/Werkwijze";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Tapijten reinigen',
+  description: 'Laat je tapijten professioneel reinigen door Carrein Services.',
+  alternates: {
+    canonical: '/diensten/tapijten',
+  },
+}
 const Tapijten = () => {
   return (
     <>

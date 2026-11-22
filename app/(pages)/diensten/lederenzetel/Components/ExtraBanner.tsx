@@ -1,3 +1,4 @@
+"use client";
 import BannerAfbeelding from "../Afbeeldingen/banner_afbeelding.png";
 import Image from "next/image";
 import {  LeafIcon, LeatherIcon } from "@/app/(pages)/_components/IcoonFunctie";

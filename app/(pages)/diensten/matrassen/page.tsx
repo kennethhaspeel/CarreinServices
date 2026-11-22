@@ -4,6 +4,15 @@ import Werkwijze from "./Components/Werkwijze";
 import ResultaatBlok from "./Components/ResultaatBlok";
 import WerkwijzeIcoonBalk from "./Components/WerkwijzeIcoonBalk";
 import Banner from "./Components/Banner";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Matrassen reinigen',
+  description: 'Laat je matrassen professioneel reinigen door Carrein Services.',
+  alternates: {
+    canonical: '/diensten/matrassen',
+  },
+}
 export default function Matrassen() {
   return (
     <>

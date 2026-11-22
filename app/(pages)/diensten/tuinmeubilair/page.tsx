@@ -5,7 +5,15 @@ import Werkwijze from "./Components/Werkwijze"
 import VoorNa from "./Components/voorna"
 import Waarom from "./Components/Waarom"
 
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: 'Tuinmeubilair reinigen',
+  description: 'Laat je tuinmeubilair professioneel reinigen door Carrein Services.',
+  alternates: {
+    canonical: '/diensten/tuinmeubilair',
+  },
+}
 
 
 const Tuinmeubilair = () => {

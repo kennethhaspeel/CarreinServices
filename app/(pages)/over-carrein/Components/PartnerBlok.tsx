@@ -1,4 +1,5 @@
-import React from 'react'
+"use client";
+
 const eyebrow = "text-xs font-bold uppercase tracking-[0.25em] text-[#087cff]";
 const partners = ["Delmi Decor", "Meubelen Defossez", "Extremis", "Jori"];
 

@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import TerrasVoor from "../Afbeeldingen/terras_voor.png"
 const stappen = [

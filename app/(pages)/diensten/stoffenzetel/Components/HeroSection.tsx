@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import HeroImage from "../Afbeeldingen/hero.png"; // Adjust the path as needed
 

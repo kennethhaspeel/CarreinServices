@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import AanpakHout from "../Afbeeldingen/0-aanpak-hout.png"
 import AanpakPlastic from "../Afbeeldingen/1-aanpak-plastic.png"

@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import interieur from "../afbeeldingen/interieurreiniging.png"
 import stoel from "../afbeeldingen/lederenstoel.png"
@@ -52,7 +53,7 @@ export default function WaaromComponent() {
               key={dienst.title}
               className="overflow-hidden rounded-lg bg-white text-slate-900"
             >
-              <div className="relative aspect-[2/1]">
+              <div className="relative aspect-2/1">
                 <Image
                   src={dienst.image}
                   alt={dienst.alt}

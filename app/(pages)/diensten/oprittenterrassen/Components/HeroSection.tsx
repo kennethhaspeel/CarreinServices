@@ -1,5 +1,7 @@
+
+"use client";
 import Image from "next/image";
-import Link from "next/link";
+
 import HeroImage from "../Afbeeldingen/heroafbeelding.png";
 
 export default function HeroSection() {

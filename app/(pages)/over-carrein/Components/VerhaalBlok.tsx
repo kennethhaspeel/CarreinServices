@@ -1,4 +1,4 @@
-import React from 'react'
+"use client";
 import { StarIcon, LeafIcon, HeartIcon, UsersIcon, GearIcon, ShieldIcon } from '../../_components/IcoonFunctie';
 import { Icoon } from '@/app/types/IcoonSVG';
 const waardes: Icoon[] = [

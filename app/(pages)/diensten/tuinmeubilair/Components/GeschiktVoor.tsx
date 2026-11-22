@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Houten from "../Afbeeldingen/0-tuinmeubelen-hout-uitsnede.png";
 import Plastic from "../Afbeeldingen/1-tuinmeubelen-plastic-uitsnede.png";

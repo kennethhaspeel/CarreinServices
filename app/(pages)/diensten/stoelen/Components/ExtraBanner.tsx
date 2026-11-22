@@ -1,6 +1,7 @@
+"use client";
 import BannerAfbeelding from "../Afbeeldingen/extra-bescherming.jpg";
 import Image from "next/image";
-import {  LeafIcon, LeatherIcon } from "@/app/(pages)/_components/IcoonFunctie";
+import {  LeafIcon } from "@/app/(pages)/_components/IcoonFunctie";
 
 const extras = [
   "Vuilafstotend",

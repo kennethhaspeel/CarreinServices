@@ -3,7 +3,15 @@ import VoorNaBlok from "./Components/VoorNaBlok";
 import Werkwijze from "./Components/Werkwijze";
 import ExtraBanner from "./Components/ExtraBanner";
 import UspBlok from "./Components/UspBlok";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: 'Lederen zetel reinigen',
+  description: 'Laat je lederen zetel professioneel reinigen door Carrein Services.',
+  alternates: {
+    canonical: '/diensten/lederenzetel',
+  },
+}
 export default function Lederenzetel() {
   return (
     <>

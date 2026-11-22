@@ -1,3 +1,5 @@
+
+"use client";
 import { Icoon } from "@/app/types/IcoonSVG";
 import {
   LeafIcon,

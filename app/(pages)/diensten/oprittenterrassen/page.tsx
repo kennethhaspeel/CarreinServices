@@ -5,7 +5,15 @@ import Werkwijze from './Components/Werkwijze';
 import GeschiktVoor from './Components/GeschiktVoor';
 import Waarom from './Components/Waarom';
 import VoorNa from './Components/voorna';
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: 'Opritten en terrassen reinigen',
+  description: 'Laat je opritten en terrassen professioneel reinigen door Carrein Services.',
+  alternates: {
+    canonical: '/diensten/oprittenterrassen',
+  },
+}
 const OprittenTerrassen = () => {
     return (
         <>

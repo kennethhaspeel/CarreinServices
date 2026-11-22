@@ -40,7 +40,7 @@ export default function HeroSection() {
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/offerte-aanvragen"
+              href="/contact"
               className="inline-flex min-h-14 items-center justify-center gap-3 rounded-md bg-[#0868ed] px-6 py-3 font-bold transition hover:bg-[#0758cb]"
             >
               <span aria-hidden="true">▣</span>

@@ -1,3 +1,4 @@
+"use client";
 import { CheckBox } from '@/app/(pages)/_components/IcoonFunctie'
 import Image from 'next/image'
 import VoorImage from '../Afbeeldingen/stoel_voor.png'

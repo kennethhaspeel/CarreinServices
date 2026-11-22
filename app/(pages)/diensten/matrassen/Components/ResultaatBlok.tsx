@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import image_voor2 from "../Afbeeldingen/matras_voor2.png";
 import image_na2 from "../Afbeeldingen/matras_na2.png";

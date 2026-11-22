@@ -7,6 +7,15 @@ import after2 from "./Afbeeldingen/2-after.png";
 import before2 from "./Afbeeldingen/2-before.png";
 import after3 from "./Afbeeldingen/3-after.png";
 import before3 from "./Afbeeldingen/3-before.png";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Voor en Na',
+  description: 'Bekijk de resultaten van onze professionele reinigingsdiensten voor auto-interieurs.',
+  alternates: {
+    canonical: '/voor-na',
+  },
+}
 export default function VoorNaPage() {
   return (
     <>

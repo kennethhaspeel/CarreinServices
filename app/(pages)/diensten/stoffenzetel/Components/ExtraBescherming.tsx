@@ -1,3 +1,4 @@
+"use client";
 import extrabeschermingafbeelding from "../Afbeeldingen/extra-bescherming.jpg"
 import Image from "next/image"
 import { ShieldIcon, LeafIcon } from'@/app/(pages)/_components/IcoonFunctie'

@@ -1,3 +1,4 @@
+"use client";
 import terras_voor from "../Afbeeldingen/terras_voor.png"
 import terras_na from "../Afbeeldingen/terras_na.png"
 import terras2_voor from "../Afbeeldingen/terras2_voor.jpg"

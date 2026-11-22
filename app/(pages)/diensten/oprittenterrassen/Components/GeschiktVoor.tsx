@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import HoutenTerras from "../Afbeeldingen/0-houten-terras-uitsnede.png";
 import StenenTerras from "../Afbeeldingen/1-stenen-terras-uitsnede.png";

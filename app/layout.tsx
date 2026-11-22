@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -11,24 +11,24 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Carrein Services",
-  description: "als het proper moet zijn",
+  metadataBase: new URL("https://carreinservices.be"),
+  title: {
+    default: "Carrein Services",
+    template: "%s | Carrein Services",
+  },
+  description:
+    "Professionele reiniging en onderhoud van meubels en interieurs.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="nl-BE"
-      className={`${montserrat.variable} h-full antialiased`}
-    >
+    <html lang="nl-BE" className={`${montserrat.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col">
           <Analytics />
           <Header />
-          <div className="AchtergrondDonker flex-1">
-            {children}
-          </div>
-          
+          <div className="AchtergrondDonker flex-1">{children}</div>
+
           <Footer />
         </div>
       </body>

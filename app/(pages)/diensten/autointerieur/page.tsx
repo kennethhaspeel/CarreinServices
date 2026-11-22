@@ -4,6 +4,15 @@ import Waarom from "./components/Waarom";
 import Aanbod from "./components/aanbod";
 import VoorNa from "./components/voorna";
 import ResultaatBlok from "./components/ResultaatBlok";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Auto-interieur reinigen',
+  description: 'Laat je auto-interieur professioneel reinigen door Carrein Services.',
+  alternates: {
+    canonical: '/diensten/autointerieur',
+  },
+}
 const AutoInterieur = () => {
   return (
     <>

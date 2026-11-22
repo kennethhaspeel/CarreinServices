@@ -1,3 +1,4 @@
+"use client";
 import matrasreiniging from "../Afbeeldingen/matrasreinigingsmachine.png";
 import mondstuk from "../Afbeeldingen/mondstuk_matras.png";
 import Image from "next/image";

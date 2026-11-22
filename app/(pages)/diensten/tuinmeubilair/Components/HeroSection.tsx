@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import HeroImage from "../Afbeeldingen/hero_image.png"; 
 

@@ -1,3 +1,5 @@
+
+"use client";
 import voor_01 from "../afbeeldingen/01_voor.jpg"
 import na_01 from "../afbeeldingen/01_na.jpg"
 import voor_02_jpg from "../afbeeldingen/voor_02.jpg"

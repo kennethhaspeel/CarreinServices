@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -25,7 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="nl-BE" className={`${montserrat.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col">
-          <Analytics />
+
           <Header />
           <div className="AchtergrondDonker flex-1">{children}</div>
 

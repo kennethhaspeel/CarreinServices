@@ -82,7 +82,7 @@ export default function Header() {
         </nav>
 
         <Link
-          href="/offerte-aanvragen"
+          href="/contact"
           className="hidden shrink-0 items-center gap-3 rounded-md AchtergrondBlauw px-5 py-3 text-sm font-bold shadow-[0_0_0_1px_#1684ff] transition hover:bg-[#087cff] sm:inline-flex"
         >
           OFFERTE AANVRAGEN
@@ -175,7 +175,7 @@ export default function Header() {
               CONTACT
             </Link>
             <Link
-              href="/offerte-aanvragen"
+              href="/contact"
               onClick={() => setMenuOpen(false)}
               className="mt-3 inline-flex w-fit items-center gap-3 rounded-md bg-[#0868ed] px-5 py-3 font-bold hover:bg-[#0758cb]"
             >

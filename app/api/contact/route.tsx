@@ -1,14 +1,8 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { z } from "zod";
-
-const contactSchema = z.object({
-  naam: z.string().trim().min(1, "Vul je naam in.").max(100),
-  email: z.email("Dit is geen geldig e-mailadres"),
-  telefoonnummer: z.string().trim().min(1, "Vul je telefoonnummer in.").max(15),
-  bericht: z.string().trim().min(5, "Vul je bericht in.").max(5000),
-  token: z.string().min(1).max(2048),
-});
+import { contactWithTokenSchema } from "../../types/contactSchema";
+import { bewaarContact } from "../../../functions/database";
 
 export async function POST(request: Request) {
   const from = process.env.RESEND_FROM;
@@ -31,7 +25,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Ongeldige aanvraag." }, { status: 400 });
   }
 
-  const result = contactSchema.safeParse(body);
+  const result = contactWithTokenSchema.safeParse(body);
 
   if (!result.success) {
     return NextResponse.json({ error: "Ongeldige gegevens." }, { status: 400 });
@@ -67,6 +61,14 @@ export async function POST(request: Request) {
         { status: 400 },
       );
     }
+
+    // Save contact to database
+    try {
+      await bewaarContact({ naam, email, telefoonnummer, bericht });
+    } catch (error) {
+      console.error("Opslaan in database mislukt:", error);
+      return NextResponse.json({ error: "Versturen mislukt." }, { status: 500 });
+    };
     const resend = new Resend(apiKey);
 
     const { error } = await resend.emails.send({

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^7.0.7",
+    "@imagekit/next": "^2.1.6",
     "@marsidev/react-turnstile": "^1.6.3",
     "@types/nodemailer": "^8.0.2",
     "@vercel/analytics": "^2.0.1",

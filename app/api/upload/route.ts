@@ -2,8 +2,6 @@ import { createHmac, randomUUID } from "node:crypto";
 import { NextResponse } from "next/server";
 import { zoekContactMetUploadToken } from "@/app/api/upload/functions";
 
-export const runtime = "nodejs";
-
 export async function POST(request: Request) {
   let body: unknown;
 

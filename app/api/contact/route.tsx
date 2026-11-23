@@ -9,6 +9,7 @@ export async function POST(request: Request) {
   const to = process.env.RESEND_TO;
   const apiKey = process.env.RESEND_API_KEY;
   const secret = process.env.TURNSTILE_SECRET;
+  let contactToken: string | null = null;
   if (!from || !to || !apiKey) {
     console.error("E-mailconfiguratie ontbreekt");
     return NextResponse.json({ error: "Versturen mislukt." }, { status: 500 });
@@ -64,11 +65,21 @@ export async function POST(request: Request) {
 
     // Save contact to database
     try {
-      await bewaarContact({ naam, email, telefoonnummer, bericht });
+       contactToken = await bewaarContact({
+        naam,
+        email,
+        telefoonnummer,
+        bericht,
+      });
     } catch (error) {
       console.error("Opslaan in database mislukt:", error);
-      return NextResponse.json({ error: "Versturen mislukt." }, { status: 500 });
-    };
+      return NextResponse.json(
+        { error: "Versturen mislukt." },
+        { status: 500 },
+      );
+    }
+
+    // versturen email naar Kenneth
     const resend = new Resend(apiKey);
 
     const { error } = await resend.emails.send({
@@ -81,6 +92,27 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error("E-mail versturen mislukt:", error.message);
+      return NextResponse.json(
+        { error: "Versturen mislukt." },
+        { status: 500 },
+      );
+    }
+
+    // versturen van email naar de gebruiker (bevestiging)
+    const { error: userError } = await resend.emails.send({
+      from: `Carrein Services Website <${from}>`,
+      replyTo: to,
+      to: [email],
+      subject: `Bevestiging: Contactformulier`,
+      text: `Beste ${naam},\n\nBedankt voor uw bericht. \n\n
+      Wij hebben uw aanvraag ontvangen en nemen zo snel mogelijk contact met u op.\n\n
+      Omdat een beeld meer zegt dan duizend woorden, geven wij u de mogelijkheid om foto's op te laden. 
+      Dit kan via deze persoonlijke link: http://localhost:3000/upload/${contactToken}
+      Met vriendelijke groet,\nCarrein Services`,
+    });
+
+    if (userError) {
+      console.error("Bevestigingsmail versturen mislukt:", userError.message);
       return NextResponse.json(
         { error: "Versturen mislukt." },
         { status: 500 },

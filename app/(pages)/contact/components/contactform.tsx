@@ -5,10 +5,11 @@ import { useForm } from "react-hook-form";
 import { useRef, useState } from "react";
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 
-import { contactSchema, type ContactSchemaType } from "../../../types/contactSchema";
+import {
+  contactSchema,
+  type ContactSchemaType,
+} from "../../../types/contactSchema";
 import { WhatsAppIcon } from "../../_components/IcoonFunctie";
-
-
 
 const ContactForm = () => {
   const {
@@ -93,7 +94,7 @@ const ContactForm = () => {
             aria-invalid={!!errors.naam}
             className={`w-full rounded-md border text-gray-700 bg-white py-3 px-6 ... ${errors.naam ? "border-red-500" : "border-gray-300"}`}
             {...register("naam")}
-            //value="Kenneth"
+            value="Kenneth"
           />
           {errors.naam && (
             <p role="alert" className="mt-2 text-sm text-red-400">
@@ -113,7 +114,7 @@ const ContactForm = () => {
             aria-invalid={!!errors.email}
             className={`w-full rounded-md border text-gray-700 bg-white py-3 px-6 ... ${errors.email ? "border-red-500" : "border-gray-300"}`}
             {...register("email", { required: true })}
-            //value="kenneth@haspeel.be"
+            value="kenneth@haspeel.be"
           />
           {errors.email && (
             <p role="alert" className="mt-2 text-sm text-red-400">
@@ -125,7 +126,6 @@ const ContactForm = () => {
           <label
             htmlFor="telefoonnummer"
             className="mb-3 block text-base font-medium text-white"
-
           >
             Telefoonnummer
           </label>
@@ -135,7 +135,7 @@ const ContactForm = () => {
             aria-invalid={!!errors.telefoonnummer}
             className={`w-full rounded-md border text-gray-700 bg-white py-3 px-6 ... ${errors.telefoonnummer ? "border-red-500" : "border-gray-300"}`}
             {...register("telefoonnummer")}
-            //value="0470123456"
+            value="0470123456"
           />
           {errors.telefoonnummer && (
             <p role="alert" className="mt-2 text-sm text-red-400">
@@ -156,7 +156,7 @@ const ContactForm = () => {
             aria-invalid={!!errors.bericht}
             className={`w-full resize-none rounded-md border text-gray-700 bg-white py-3 px-6 ... ${errors.bericht ? "border-red-500" : "border-gray-300"}`}
             {...register("bericht", { required: true })}
-            //value="Dit is een testbericht"
+            value="Dit is een testbericht"
           ></textarea>
           {errors.bericht && (
             <p role="alert" className="mt-2 text-sm text-red-400">
@@ -164,7 +164,7 @@ const ContactForm = () => {
             </p>
           )}
         </div>
-        <div>
+        <div className="mb-5">
           <Turnstile
             ref={turnstileRef}
             siteKey={TurnstileSiteKey!}

@@ -138,7 +138,7 @@ export default async function Footer() {
             </ul>
 
             <Link
-              href="/offerte-aanvragen"
+              href="/contact"
               className="mt-5 inline-flex items-center gap-3 rounded-md bg-[#0868ed] px-5 py-3 text-sm font-bold uppercase transition hover:bg-[#0758cb]"
             >
               Offerte aanvragen

@@ -13,7 +13,7 @@ const responseSchema = z.object({
 
 
 
-export async function bewaarContact(contact: ContactSchemaType): Promise<void> {
+export async function bewaarContact(contact: ContactSchemaType): Promise<string> {
   const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
   const databaseId = process.env.CLOUDFLARE_D1_DATABASE_ID;
   const apiToken = process.env.CLOUDFLARE_API_TOKEN;
@@ -60,4 +60,6 @@ if (!response.ok) {
       `D1 query failed: ${data.errors.map((error) => error.message).join(", ")}`,
     );
   }
+  console.log("Contact successfully saved with token:", token);
+  return token;
 }

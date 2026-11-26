@@ -9,6 +9,7 @@ export async function POST(request: Request) {
   const to = process.env.RESEND_TO;
   const apiKey = process.env.RESEND_API_KEY;
   const secret = process.env.TURNSTILE_SECRET;
+  const baseurl = process.env.BASE_URL || "http://localhost:3000";
   let contactToken: string | null = null;
   if (!from || !to || !apiKey) {
     console.error("E-mailconfiguratie ontbreekt");
@@ -107,7 +108,7 @@ export async function POST(request: Request) {
       text: `Beste ${naam},\n\nBedankt voor uw bericht. \n\n
       Wij hebben uw aanvraag ontvangen en nemen zo snel mogelijk contact met u op.\n\n
       Omdat een beeld meer zegt dan duizend woorden, geven wij u de mogelijkheid om foto's op te laden. 
-      Dit kan via deze persoonlijke link: http://localhost:3000/upload/${contactToken}
+      Dit kan via deze persoonlijke link: ${baseurl}/upload/${contactToken}
       Met vriendelijke groet,\nCarrein Services`,
     });
 

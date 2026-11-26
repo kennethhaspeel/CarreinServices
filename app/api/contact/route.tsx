@@ -9,7 +9,7 @@ export async function POST(request: Request) {
   const to = process.env.RESEND_TO;
   const apiKey = process.env.RESEND_API_KEY;
   const secret = process.env.TURNSTILE_SECRET;
-  const baseurl = process.env.BASE_URL || "http://localhost:3000";
+  const baseurl = process.env.APP_URL || "http://localhost:3000";
   let contactToken: string | null = null;
   if (!from || !to || !apiKey) {
     console.error("E-mailconfiguratie ontbreekt");

@@ -4,6 +4,19 @@ import { z } from "zod";
 import { contactWithTokenSchema } from "../../types/contactSchema";
 import { bewaarContact } from "../../../functions/database";
 
+function escapeHtml(waarde: string): string {
+  return waarde.replace(/[&<>"']/g, (teken) => {
+    const tekens: Record<string, string> = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    };
+    return tekens[teken];
+  });
+}
+
 export async function POST(request: Request) {
   const from = process.env.RESEND_FROM;
   const to = process.env.RESEND_TO;
@@ -66,7 +79,7 @@ export async function POST(request: Request) {
 
     // Save contact to database
     try {
-       contactToken = await bewaarContact({
+      contactToken = await bewaarContact({
         naam,
         email,
         telefoonnummer,
@@ -83,13 +96,19 @@ export async function POST(request: Request) {
     // versturen email naar Kenneth
     const resend = new Resend(apiKey);
 
-    const { error } = await resend.emails.send({
-      from: `Carrein Services Website <${from}>`,
-      to: [to],
-      replyTo: email,
-      subject: `Contactformulier: ${naam}`,
-      text: `Naam: ${naam}\nE-mail: ${email}\nTelefoonnummer: ${telefoonnummer}\n\nBericht:\n${bericht}`,
-    });
+const { error } = await resend.emails.send({
+  to: [to],
+  replyTo: email,
+  template: {
+    id: "contactformulier-ingediend",
+    variables: {
+      NAAM: escapeHtml(naam),
+      KLANT_EMAIL: escapeHtml(email),
+      TELEFOON: escapeHtml(telefoonnummer),
+      BERICHT: escapeHtml(bericht).replace(/\r?\n/g, "<br>"),
+    },
+  },
+});
 
     if (error) {
       console.error("E-mail versturen mislukt:", error.message);
@@ -101,15 +120,11 @@ export async function POST(request: Request) {
 
     // versturen van email naar de gebruiker (bevestiging)
     const { error: userError } = await resend.emails.send({
-      from: `Carrein Services Website <${from}>`,
-      replyTo: to,
       to: [email],
-      subject: `Bevestiging: Contactformulier`,
-      text: `Beste ${naam},\n\nBedankt voor uw bericht. \n\n
-      Wij hebben uw aanvraag ontvangen en nemen zo snel mogelijk contact met u op.\n\n
-      Omdat een beeld meer zegt dan duizend woorden, geven wij u de mogelijkheid om foto's op te laden. 
-      Dit kan via deze persoonlijke link: ${baseurl}/upload/${contactToken}
-      Met vriendelijke groet,\nCarrein Services`,
+      template: {
+        id: "klant-bevestiging",
+        variables: { UPLOAD_URL: `${baseurl}/upload/${contactToken}` },
+      },
     });
 
     if (userError) {

@@ -34,6 +34,19 @@ const d1Schema = z.object({
   ),
 });
 
+function escapeHtml(waarde: string): string {
+  return waarde.replace(/[&<>"']/g, (teken) => {
+    const tekens: Record<string, string> = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    };
+    return tekens[teken];
+  });
+}
+
 export async function POST(request: Request) {
   let body: unknown;
 
@@ -117,34 +130,45 @@ export async function POST(request: Request) {
       );
     }
 
-    const links = fotos
-      .map((foto, index) => `Foto ${index + 1}: ${foto.imagekit_url}`)
-      .join("\n");
+const fotoLinks = fotos
+  .map((foto, index) => {
+    const url = new URL(foto.imagekit_url);
+
+    if (url.protocol !== "https:") {
+      throw new Error("Ongeldige foto-URL");
+    }
+
+    return `<p style="margin:0 0 12px;">
+      <a href="${escapeHtml(url.toString())}" style="color:#66adff;">
+        Foto ${index + 1} bekijken
+      </a>
+    </p>`;
+  })
+  .join("");
 
     const idempotencyKey = createHash("sha256")
       .update(JSON.stringify([contactId, fileIds]))
       .digest("hex");
 
     const resend = new Resend(resendKey);
-    const { error } = await resend.emails.send(
-      {
-        from: `Carrein Services Website <${from}>`,
-        to: [to],
-        subject: "Nieuwe foto's bij een aanvraag",
-        text: `Er zijn foto's opgeladen bij een aanvraag.
-
-Naam: ${fotos[0].naam}
-Contact-ID: ${contactId}
-
-${links}`,
+const { error } = await resend.emails.send(
+  {
+    to: [to],
+    template: {
+      id: "photo-upload-notification",
+      variables: {
+        NAAM: escapeHtml(fotos[0].naam),
+        CONTACT_ID: String(contactId),
+        FOTO_LINKS: fotoLinks,
       },
-      { idempotencyKey: `fotos/${idempotencyKey}` },
-    );
+    },
+  },
+  { idempotencyKey: `fotos/${idempotencyKey}` },
+);
 
-    if (error) {
-      throw new Error(`E-mail versturen mislukt: ${error.message}`);
-    }
-
+if (error) {
+  throw new Error(`E-mail versturen mislukt: ${error.message}`);
+}
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Fotomelding mislukt:", error);

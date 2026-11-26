@@ -45,6 +45,8 @@ export default function UploadPagina({
   async function onSubmit(data: UploadForm) {
     setMelding("");
     setAantalOpgeladen(0);
+    const geregistreerdeIds: string[] = [];
+    const geregistreerdeFotos: File[] = [];
     try {
       for (const foto of data.fotos) {
         // Controleer bestandstype op extensie
@@ -77,25 +79,57 @@ export default function UploadPagina({
         if (!uploadResponse.ok) {
           throw new Error("ImageKit-upload mislukt");
         }
+        const uploadResult = await uploadResponse.json();
+        if (typeof uploadResult.fileId !== "string") {
+          throw new Error("ImageKit gaf geen bestands-ID terug");
+        }
 
-        const responseData = await uploadResponse.json();
         // Bewaar de foto in de database via de API
         const registratie = await fetch("/api/upload/bewarendatabase", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             token, // Het persoonlijke token uit de uploadlink
-            fileId: responseData.fileId,
+            fileId: uploadResult.fileId,
           }),
         });
 
         if (!registratie.ok) {
           throw new Error("Foto kon niet in D1 worden geregistreerd");
         }
+        geregistreerdeIds.push(uploadResult.fileId);
+        geregistreerdeFotos.push(foto);
         setAantalOpgeladen((prev) => prev + 1);
         setTotaalOpgeladen((prev) => prev + 1);
       }
 
+      setValue(
+        "fotos",
+        data.fotos.filter((foto) => !geregistreerdeFotos.includes(foto)),
+        { shouldDirty: true },
+      );
+      let meldingMislukt = false;
+      if (geregistreerdeIds.length > 0) {
+        try {
+          const response = await fetch("/api/upload/melding", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ token, fileIds: geregistreerdeIds }),
+          });
+
+          if (!response.ok) throw new Error("Melding versturen mislukt");
+        } catch (error) {
+          console.error(error);
+          meldingMislukt = true;
+        }
+      }
+      if (meldingMislukt) {
+        setMelding(
+          "Je foto's zijn opgeladen, maar de melding kon niet worden verstuurd. Neem contact met ons op.",
+        );
+      } else {
+        setMelding("Je foto's zijn opgeladen. Bedankt!");
+      }
       reset();
       setMelding("Je foto's zijn opgeladen. Bedankt!");
     } catch (error) {
@@ -170,7 +204,11 @@ export default function UploadPagina({
               <button
                 type="button"
                 onClick={() => inputRef.current?.click()}
-                disabled={isSubmitting || aantalFotos >= MAX_FOTOS || totaalOpgeladen >= MAX_FOTOS}
+                disabled={
+                  isSubmitting ||
+                  aantalFotos >= MAX_FOTOS ||
+                  totaalOpgeladen >= MAX_FOTOS
+                }
                 className="rounded-md border border-white/60 px-6 py-3 font-semibold text-white hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Foto selecteren ({aantalFotos}/{MAX_FOTOS})
